@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sample Web Page</h1>
+  </header>
+  <section>
+    <h2>Welcome to My Sample Web Page</h2>
+    <p>This is a simple example of a web page with HTML, CSS, and JavaScript all in one file.</p>
+    <button onclick="changeColor()">Change Background Color</button>
+  </section>
+  <footer>
+    <p>&copy; 2024 Sample Web Page. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function changeColor() {
+      document.body.style.backgroundColor = getRandomColor();
+    }
+
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+</body>
+</html>
